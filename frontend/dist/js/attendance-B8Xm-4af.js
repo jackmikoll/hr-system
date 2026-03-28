@@ -1,0 +1,1 @@
+import{D as e}from"./index-BgATg0g0.js";const c=t=>e.get("/attendance/list",{params:t}),s=t=>e.post(`/attendance/check-${t}`),r=(t,n)=>e.put(`/attendance/${t}`,n),d=()=>e.get("/attendance/today");export{c as a,s as c,d as g,r as u};

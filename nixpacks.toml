@@ -1,0 +1,10 @@
+[phases.build]
+cmds = [
+    "cd backend && mvn clean package -DskipTests"
+]
+
+[phases.setup]
+nixPkgs = ["maven", "jdk17"]
+
+[start]
+cmd = "java -jar backend/target/hr-management-system-1.0.0.jar --spring.profiles.active=prod"
