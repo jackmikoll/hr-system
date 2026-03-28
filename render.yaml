@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: hr-system
+    env: java
+    buildCommand: cd backend && mvn clean package -DskipTests
+    startCommand: java -jar backend/target/hr-management-system-1.0.0.jar --spring.profiles.active=prod
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: JWT_SECRET
+        value: "hr-management-system-secret-key-2024"
+    healthCheckPath: /
+    numInstances: 1
+    plan: free
